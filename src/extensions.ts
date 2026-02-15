@@ -37,7 +37,7 @@ const importExtensions = {
   // @ts-ignore: no d.ts file
   colortbl: () => import("@mathjax/src/components/mjs/input/tex/extensions/colortbl/colortbl.js"),
   // @ts-ignore: no d.ts file
-  colorv2: () => import("@mathjax/src/components/mjs/input/tex/extensions/colorv2/colorv2.js"),
+  // colorv2: () => import("@mathjax/src/components/mjs/input/tex/extensions/colorv2/colorv2.js"),
   // @ts-ignore: no d.ts file
   configmacros: () => import("@mathjax/src/components/mjs/input/tex/extensions/configmacros/configmacros.js"),
   // @ts-ignore: no d.ts file
