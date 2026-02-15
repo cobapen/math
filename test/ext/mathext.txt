@@ -1,0 +1,214 @@
+# MathJax TeX Extensions Test (raw blocks)
+# - Blocks are separated by ---
+# - Lines starting with # are comments/titles
+# - Only $$...$$ blocks are executed
+
+# test
+$$
+\TeX
+$$
+---
+# action
+$$
+\mathtip{a+b}{\text{tooltip: action}}
+$$
+---
+# ams
+$$
+\begin{align}
+    f(x) &= x^2 + 1\\
+    f'(x) &= 2x
+\end{align}
+$$
+---
+# amscd
+$$
+\begin{CD}
+    A @>f>> B\\
+    @VgVV @VVhV\\
+    C @>>k> D
+\end{CD}
+$$
+---
+# bbm
+$$
+\mathbbm{1}_{A} \quad \text{(indicator function)}
+$$
+---
+# bboldx
+$$
+\mathbfbb{R} \quad \text{and} \quad \mathbfbb{Z}
+$$
+---
+# bbox
+$$
+\bbox[.2em,#eef,border:1px solid black]{x^2 + 1}
+$$
+---
+# begingroup
+$$
+\begingroup\def\X{\alpha+\beta}\X\endgroup
+$$
+---
+# boldsymbol
+$$
+\boldsymbol{\alpha + \beta + \gamma}
+$$
+---
+# braket
+$$
+\bra{\phi}\,\ket{\psi} = \braket{\phi\mid\psi}
+$$
+---
+# bussproofs
+$$
+\begin{prooftree}
+    \AxiomC{$A$}
+    \UnaryInfC{$B$}
+\end{prooftree}
+$$
+---
+# cancel
+$$
+\cancel{(x-1)}(x+1) = x^2 - 1
+$$
+---
+# cases
+$$
+f(x)=\begin{cases}
+    -1 & x<0\\
+    0 & x=0\\
+    1 & x>0
+\end{cases}
+$$
+---
+# centernot
+$$
+A \centernot\subset B
+$$
+---
+# color
+$$
+\textcolor{blue}{x} + {\color{red} y + z }
+$$
+---
+# colortbl
+$$
+\begin{array}{cc}
+    \rowcolor{yellow} 1 & 2\\
+    3 & \cellcolor{cyan} 4
+\end{array}
+$$
+---
+# colorv2
+$$
+\textcolor{red}{\text{colorv2 is not supported as color (colorv3) is enabled}}
+$$
+---
+# configmacros (expects macro \\bm{} configured)
+$$
+\bm{\nabla} \times \bm{\mathbf{E}} = -\frac{\partial \bm{\mathbf{B}}}{\partial t}
+$$
+---
+# dsfont
+$$
+\mathds{R} \supset \mathds{Q} \supset \mathds{Z}
+$$
+---
+# empheq
+$$
+\begin{empheq}[left=\empheqlbrace, right=\empheqrbrace]{align}
+E&=mc^2 \\
+Y&= \sum_{n=1}^\infty \frac{1}{n^2}
+\end{empheq}
+$$
+---
+# enclose
+$$
+\enclose{circle}{x} + \enclose{box}{y}
+$$
+---
+# extpfeil
+$$
+A \xtwoheadrightarrow{f} B \qquad C \xlongequal{\text{def}} D
+$$
+---
+# gensymb
+$$
+30\degree \quad \text{and} \quad 9.81\,\mathrm{m\,s^{-2}}
+$$
+---
+# html
+$$
+\href{https://example.com}{\text{link}}\quad \class{note}{x}\quad \style{color:green}{y}
+$$
+---
+# mathtools
+$$
+a \coloneqq b \qquad \text{and} \qquad x \xLongrightarrow{\text{mathtools}} y
+$$
+---
+# mhchem
+$$
+\ce{CO2 + C -> 2 CO}
+$$
+---
+# newcommand
+$$
+\newcommand{\vect}[1]{\mathbf{#1}}\quad \vect{v} = \begin{pmatrix}1\\2\\3\end{pmatrix}
+$$
+---
+# physics
+$$
+\dv{x}{t} = v \qquad \qty(\dv[2]{x}{t}) = a
+$$
+---
+# require
+# 
+# require extension is not supported, and have no effect.
+#
+$$
+\require{amscd}\;\begin{CD} X @>>> Y \end{CD}
+$$
+---
+# setoptions
+$$
+\setOptions{tagSide=left,tagIndent=0em}\qquad E = mc^2
+$$
+---
+# tagformat
+$$
+\begin{equation}
+    a^2+b^2=c^2\tag{Pythagoras}
+\end{equation}
+$$
+---
+# texhtml
+$$
+\setOptions{allowTexHTML=true}\;<tex-html><span style="font-weight:bold">raw HTML inside TeX</span></tex-html>
+$$
+---
+# textcomp
+$$
+\textdegree\quad \textmu\quad \textonehalf
+$$
+---
+# unicode
+$$
+\unicode{x03B1}\;\unicode{x03B2}\;\unicode{x03B3}
+$$
+---
+# units
+$$
+\units[9.81]{m/s^2}\qquad \unitfrac[1]{m}{s}
+$$
+---
+# upgreek
+$$
+\upalpha + \upbeta + \upgamma
+$$
+---
+# verb
+$$
+\verb|a_b^c|\quad \text{(verbatim)}
+$$

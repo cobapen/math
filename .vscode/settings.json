@@ -1,0 +1,13 @@
+{
+  "eslint.format.enable": true,
+  "[javascript][typescript][markdown]": {
+    "editor.formatOnSave": true,
+    "editor.defaultFormatter": "dbaeumer.vscode-eslint",
+  },
+  "[javascript]": {
+    "editor.codeActionsOnSave": {
+      "source.fixAll": "explicit",
+      "source.removeUnusedImports": "explicit"
+    }
+  },
+}
