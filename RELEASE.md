@@ -1,6 +1,10 @@
 
 # Release Log
 
+## 0.1.2 (2026-02-16)
+
+- Renamed function to load extensions
+
 ## 0.1.1 (2026-02-16)
 
 - Excluded colorv2 from extensions list
