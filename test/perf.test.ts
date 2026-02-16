@@ -6,9 +6,9 @@ const TEST_TIMEOUT_MS = 25000;
 
 test("Performance Check", async () => {
   const t1 = performance.now();
-  const module = await import("../src/index.js");
+  const { MathJaxEngine } = await import("../src/index.js");
   const t2 = performance.now();
-  await module.enableMathJaxExtensions();
+  await MathJaxEngine.loadExtensions();
   const t3 = performance.now();
 
   const dt1 = t2 - t1;

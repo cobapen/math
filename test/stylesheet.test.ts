@@ -1,8 +1,8 @@
 import { describe, expect, test, vi } from "vitest";
 import { allFontExtensions } from "../src/fonts";
-import { enableMathJaxExtensions, MathJaxEngine } from "../src/mathjax";
+import { MathJaxEngine } from "../src/mathjax";
 
-await enableMathJaxExtensions();
+await MathJaxEngine.loadExtensions();
 
 describe("Mathjax stylesheet", () => {
 

@@ -95,23 +95,6 @@ const defaultConvertOption: ConvertOptions = {
 };
 
 // Configure asyncLoad (Currently unsupported feature) -------------------
-const syncRequire = createRequire(import.meta.url);
-mathjax.asyncIsSynchronous = true;
-mathjax.asyncLoad = (file: string) => {
-  console.warn("asyncLoader is not supported: ", file);
-  return syncRequire(file);
-};
-
-// ----------------------------------------------------------------------
-
-/**
- * Imports all MathJax-extension and dynamic-font scripts.
- * This method is applied globally and should be called only once.
- */
-export async function enableMathJaxExtensions() {
-  await enableAllExtensions();
-  await preloadDynamicFonts();
-}
 
 // ----------------------------------------------------------------------
 interface AnyObject {
@@ -303,6 +286,15 @@ export class MathJaxEngine {
   stylesheet(): string {
     const css = this.adaptor.textContent(this.chtml.styleSheet(this.html));
     return css.replace(/^\r?\n+$/mg, ""); // remove trailing newlines
+  }
+
+  /**
+   * Preload MathJax extensions, dynamicFonts and fontExtensions.
+   * This method is applied globally once called.
+   */
+  static async loadExtensions() {
+    await enableAllExtensions();
+    await preloadDynamicFonts();
   }
 }
 

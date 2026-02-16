@@ -1,7 +1,7 @@
 import { describe, expect, test } from "vitest";
-import { enableMathJaxExtensions, MathJaxEngine } from "../src/mathjax";
+import { MathJaxEngine } from "../src/mathjax";
 
-await enableMathJaxExtensions();
+await MathJaxEngine.loadExtensions();
 
 describe("MathJax engine convert", () => {
   test("convert succeeds", () => {

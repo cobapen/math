@@ -1,9 +1,9 @@
 import fs from "node:fs";
 import path from "node:path";
 import { expect, test } from "vitest";
-import { enableMathJaxExtensions, MathJaxEngine } from "../src/mathjax.js";
+import { MathJaxEngine } from "../src/mathjax.js";
 
-await enableMathJaxExtensions();
+await MathJaxEngine.loadExtensions();
 const rawFilePath = path.resolve(__dirname, "./ext/mathext.txt");
 const htmlPath = path.resolve(__dirname, "./ext/mathext.html");
 const cssPath = path.resolve(__dirname, "./ext/mathext.css");
