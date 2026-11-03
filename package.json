@@ -15,28 +15,27 @@
     "node": ">=20.11.0 <21 || >=21.2.0"
   },
   "scripts": {
-    "build": "tsc",
-    "build:dev": "tsc --build tsconfig.dev.json",
-    "build:doc": "npm run build && node docs/build.js",
+    "build": "tsc -b tsconfig.build.json",
+    "build:dev": "tsc -b tsconfig.dev.json",
     "test": "vitest",
     "coverage": "vitest run --coverage",
     "lint": "eslint src",
     "lint:fix": "eslint src --fix"
   },
   "dependencies": {
-    "@mathjax/mathjax-bbm-font-extension": "^4.1.0",
-    "@mathjax/mathjax-bboldx-font-extension": "^4.1.0",
-    "@mathjax/mathjax-dsfont-font-extension": "^4.1.0",
-    "@mathjax/mathjax-mhchem-font-extension": "^4.1.0",
-    "@mathjax/src": "^4.1.0"
+    "@mathjax/mathjax-bbm-font-extension": "^4.1.3",
+    "@mathjax/mathjax-bboldx-font-extension": "^4.1.3",
+    "@mathjax/mathjax-dsfont-font-extension": "^4.1.3",
+    "@mathjax/mathjax-mhchem-font-extension": "^4.1.3",
+    "@mathjax/src": "^4.1.3"
   },
   "devDependencies": {
-    "@cobapen/eslint-config": "^0.5.1",
+    "@cobapen/eslint-config": "^0.5.2",
     "@types/mustache": "^4.2.6",
-    "@types/node": "^25.2.3",
-    "@vitest/coverage-v8": "^4.0.18",
-    "eslint": "^9.39.2",
-    "typescript": "^5.9.3",
-    "vitest": "^4.0.18"
+    "@types/node": "^26.6.6",
+    "@vitest/coverage-v8": "^5.1.0",
+    "eslint": "^10.14.0",
+    "typescript": "6.0.3",
+    "vitest": "^5.1.0"
   }
 }
