@@ -1,5 +1,5 @@
 import { describe, expect, test } from "vitest";
-import { MathJaxEngine } from "../src/mathjax";
+import { MathJaxEngine } from "../src/mathjax.js";
 
 describe("MathJax stylesheet (noext)", () => {
   test("No font extensions", () => {

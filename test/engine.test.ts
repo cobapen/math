@@ -1,5 +1,5 @@
 import { describe, expect, test } from "vitest";
-import { MathJaxEngine } from "../src/mathjax";
+import { MathJaxEngine } from "../src/mathjax.js";
 
 await MathJaxEngine.loadExtensions();
 
@@ -9,7 +9,7 @@ describe("MathJax engine convert", () => {
     const result = engine.convert("x + y");
     expect(result).toBeDefined();
     expect(typeof result).toBe("string");
-    expect(result).contain("mjx-container");
+    expect(result).toContain("mjx-container");
   });
 
   test("output html contains mjx-copytext", () => {

@@ -1,6 +1,6 @@
 import { describe, expect, test, vi } from "vitest";
-import { allFontExtensions } from "../src/fonts";
-import { MathJaxEngine } from "../src/mathjax";
+import { allFontExtensions } from "../src/fonts.js";
+import { MathJaxEngine } from "../src/mathjax.js";
 
 await MathJaxEngine.loadExtensions();
 
@@ -63,7 +63,7 @@ describe("Mathjax stylesheet", () => {
 
     expect(mockFn).toHaveBeenCalled();
     expect(mockFn).toHaveBeenCalledWith("mathjax-bbm");
-    expect(mockFn).toBeCalledTimes(Object.keys(allFontExtensions).length + 1); // Font(1) + FontExtensions
+    expect(mockFn).toHaveBeenCalledTimes(Object.keys(allFontExtensions).length + 1); // Font(1) + FontExtensions
     expect(stylesheet.includes("https://")).toBe(false);
     expect(stylesheet.includes("cdnjs")).toBe(false);
     expect(stylesheet.includes("DUMMY/")).toBe(true);
